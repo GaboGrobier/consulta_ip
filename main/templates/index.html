@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta por su ip </title>
+</head>
+<body>
+
+    <h1>Bienvenido</h1>
+
+    <form action="/consulta/" method="post">
+        {% csrf_token  %}
+        {{form.as_p}}
+        <button>Consultar </button>
+    </form>
+    <form action="/json/" method="post">
+        {% csrf_token  %}
+        {{form.as_p}}
+        <button>Consultar json </button>
+    </form>  
+</body>
+</html>
